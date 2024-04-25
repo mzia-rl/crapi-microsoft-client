@@ -1,0 +1,30 @@
+{
+    "name": "canzell/crapi-microsoft-client",
+    "description": "A Laravel project for making REST requests to the Microsoft Graph API.",
+    "type": "project",
+	"version": 1.0,
+    "authors": [
+        {
+            "name": "Isaiah Smith",
+            "email": "7606654-isaiah.smith@users.noreply.gitlab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Canzell\\": "./src"
+        }
+    },
+    "require": {
+        "canzell/crapi-client": "@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Canzell\\Providers\\MicrosoftProvider"
+            ],
+            "aliases": {
+                "Microsoft": "Canzell\\Facades\\Microsoft"
+            }
+        }
+    }
+}
